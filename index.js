@@ -47,7 +47,6 @@ module.exports = function RackspaceStore(options) {
       container: options.container,
       remote: options.remote,
       contentType: mime.lookup(fd),
-      headers:options.headers
     };
 
     var writeStream = client.upload(file);
@@ -94,8 +93,9 @@ module.exports = function RackspaceStore(options) {
 
       var file = {
         container: options.container,
-        remote: options.remote,
+        remote: optoins.remote,
         contentType: mime.lookup(__newFile.fd),
+        headers:options.headers
       };
 
       var wr = new Transform({ objectMode:true });
