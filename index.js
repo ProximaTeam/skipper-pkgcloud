@@ -93,7 +93,7 @@ module.exports = function RackspaceStore(options) {
 
       var file = {
         container: options.container,
-        remote: optoins.remote,
+        remote: options.remote,
         contentType: mime.lookup(__newFile.fd),
         headers:options.headers
       };
