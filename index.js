@@ -47,6 +47,7 @@ module.exports = function RackspaceStore(options) {
       container: options.container,
       remote: options.remote,
       contentType: mime.lookup(fd),
+      headers:options.headers
     };
 
     var writeStream = client.upload(file);
